@@ -1,0 +1,56 @@
+{
+  "sui": {
+    "subtitle": "subtitles.soundboard.sui",
+    "sounds": [
+      "soundboard:sui"
+    ]
+  },
+  "among": {
+    "subtitle": "subtitles.soundboard.among",
+    "sounds": [
+      "soundboard:among"
+    ]
+  },
+  "wow": {
+    "subtitle": "subtitles.soundboard.wow",
+    "sounds": [
+      "soundboard:wow"
+    ]
+  },
+  "custom1": {
+    "subtitle": "subtitles.soundboard.custom1",
+    "sounds": [
+    "soundboard:custom1"
+  ]
+  },
+  "custom2": {
+    "subtitle": "subtitles.soundboard.custom2",
+    "sounds": [
+      "soundboard:custom2"
+    ]
+  },
+  "custom3": {
+    "subtitle": "subtitles.soundboard.custom3",
+    "sounds": [
+      "soundboard:custom3"
+    ]
+  },
+  "custom4": {
+    "subtitle": "subtitles.soundboard.custom4",
+    "sounds": [
+      "soundboard:custom4"
+    ]
+  },
+  "custom5": {
+    "subtitle": "subtitles.soundboard.custom56",
+    "sounds": [
+      "soundboard:custom5"
+    ]
+  },
+  "custom6": {
+    "subtitle": "subtitles.soundboard.custom6",
+    "sounds": [
+      "soundboard:custom6"
+    ]
+  }
+}

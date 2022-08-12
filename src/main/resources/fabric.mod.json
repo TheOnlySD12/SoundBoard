@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "soundboard",
+  "version": "${version}",
+
+  "name": "Sound Board",
+  "description": "Adds a client-side Sound Board",
+  "authors": [
+    "SD12"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/soundboard/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.sd12.soundboard.SoundBoard"
+    ],
+    "modmenu": [
+      "com.sd12.soundboard.ModMenuSupport"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
