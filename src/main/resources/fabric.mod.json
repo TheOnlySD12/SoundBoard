@@ -10,7 +10,8 @@
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/TheOnlySD12/SoundBoard",
+    "issues": "https://github.com/TheOnlySD12/SoundBoard/issues"
   },
 
   "license": "MIT",

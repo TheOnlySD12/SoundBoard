@@ -1,9 +1,22 @@
-# Fabric Example Mod
+# SoundBoard
 
-## Setup
+## Use
+Press "O" in-game to open the GUI
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+To enable Dark Mode install ModMenu and go to SoundBoard Config
+## Custom Sounds
+### Info
+To add custom sounds you must use a resource pack.
 
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Template Resource Pack : [GitHub Link](https://github.com/TheOnlySD12/SoundBoard/tree/master/SoundBoard%20Resource%20Pack)
+### Guide
+1. Download a .mp3 file
+2. Convert your .mp3 to .ogg
+    - [Online Converter](https://convertio.co/mp3-ogg/)
+3. Rename it custom1.ogg
+    - To add more just rename them custom2, custom3 etc.
+    - Six sounds is the limit (custom6.ogg)
+4. Put it in assets/soundboard/sounds
+### Optional
+5. Open assets/soundboard/lang/en_us.json
+6. Add subtitles or change button names
