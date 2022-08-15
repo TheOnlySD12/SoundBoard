@@ -29,14 +29,24 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 		darkmodeButton.setToggle(LibGuiClient.config.darkMode);
 		root.add(darkmodeButton, 0, 2, 6, 1);
 
+		WToggleButton compactButton = new WToggleButton(Text.literal("Compact Mode")) {
+			@Override
+			public void onToggle(boolean True) {
+				SoundBoard.isCompact = True;
+				LibGuiClient.saveConfig(LibGuiClient.config);
+			}
+		};
+		compactButton.setToggle(SoundBoard.isCompact);
+		root.add(compactButton, 0, 3, 6, 1);
+
 		WButton doneButton = new WButton(ScreenTexts.DONE);
 		doneButton.setOnClick(()->{
 			MinecraftClient.getInstance().setScreen(previous);
 		});
-		root.add(doneButton, 0, 4, 3, 1);
+		root.add(doneButton, 0, 5, 3, 1);
 		
 		root.setBackgroundPainter(BackgroundPainter.VANILLA);
-		root.setSize(7*18, 6*18);
+		root.setSize(7*18, 7*18);
 		
 		root.validate(this);
 	}

@@ -31,12 +31,17 @@ public class SoundBoard implements ClientModInitializer {
     public static final Identifier CUSTOM6 = new Identifier("soundboard:custom6");
     public static SoundEvent CUSTOM6_EVENT = new SoundEvent(CUSTOM6);
     public static KeyBinding soundboard_key;
+    public static boolean isCompact;
 
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (soundboard_key.wasPressed()) {
                 assert client.player != null;
-                MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardGui()));
+                if (isCompact) {
+                    MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardCompactGui()));
+                } else {
+                    MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardGui()));
+                }
             }
         });
     }
