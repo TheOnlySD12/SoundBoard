@@ -17,7 +17,7 @@ public class SoundBoardGui extends LightweightGuiDescription {
         root.setInsets(Insets.ROOT_PANEL);
 
         WLabel label = new WLabel(Text.literal("Sound Board"));
-        root.add(label, 0, 0, 2, 1);
+        root.add(label, 0, 0, 3, 1);
 
         WButton button = new WButton(Text.literal("SUIII Button"));
         root.add(button, 0, 2, 5, 1);
