@@ -4,10 +4,12 @@ import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.WButton;
 import io.github.cottonmc.cotton.gui.widget.WGridPanel;
 import io.github.cottonmc.cotton.gui.widget.WLabel;
+import io.github.cottonmc.cotton.gui.widget.WTiledSprite;
 import io.github.cottonmc.cotton.gui.widget.data.Insets;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
 public class SoundBoardGui extends LightweightGuiDescription {
     public SoundBoardGui() {
@@ -63,6 +65,12 @@ public class SoundBoardGui extends LightweightGuiDescription {
         root.add(button9, 12, 6, 5, 1);
         button9.setOnClick(() -> MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance
                 .master(SoundBoard.CUSTOM6_EVENT, 1.0F, 1.0F)));
+
+        WTiledSprite sprite = new WTiledSprite(135, 20, new Identifier("soundboard", "art.png"));
+        root.add(sprite, 8, 0);
+
+        WTiledSprite sprite2 = new WTiledSprite( 20, 30, new Identifier("soundboard", "icon_crop.png"));
+        root.add(sprite2, 16,0);
 
         root.validate(this);
     }
