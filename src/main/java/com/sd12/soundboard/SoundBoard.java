@@ -18,6 +18,8 @@ public class SoundBoard implements ClientModInitializer {
     public static SoundEvent AMONG_EVENT = new SoundEvent(AMONG);
     public static final Identifier WOW = new Identifier("soundboard:wow");
     public static SoundEvent WOW_EVENT = new SoundEvent(WOW);
+    public static final Identifier SMG = new Identifier("soundboard:smg");
+    public static SoundEvent SMG_EVENT = new SoundEvent(SMG);
     public static final Identifier CUSTOM1 = new Identifier("soundboard:custom1");
     public static SoundEvent CUSTOM1_EVENT = new SoundEvent(CUSTOM1);
     public static final Identifier CUSTOM2 = new Identifier("soundboard:custom2");
@@ -30,8 +32,13 @@ public class SoundBoard implements ClientModInitializer {
     public static SoundEvent CUSTOM5_EVENT = new SoundEvent(CUSTOM5);
     public static final Identifier CUSTOM6 = new Identifier("soundboard:custom6");
     public static SoundEvent CUSTOM6_EVENT = new SoundEvent(CUSTOM6);
+    public static final Identifier CUSTOM7 = new Identifier("soundboard:custom7");
+    public static SoundEvent CUSTOM7_EVENT = new SoundEvent(CUSTOM7);
+    public static final Identifier CUSTOM8 = new Identifier("soundboard:custom8");
+    public static SoundEvent CUSTOM8_EVENT = new SoundEvent(CUSTOM8);
     public static KeyBinding soundboard_key;
     public static boolean isCompact;
+    public static boolean isExtended;
 
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -39,6 +46,8 @@ public class SoundBoard implements ClientModInitializer {
                 assert client.player != null;
                 if (isCompact) {
                     MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardCompactGui()));
+                } else  if (isExtended){
+                    MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardExtendedGui()));
                 } else {
                     MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardGui()));
                 }
@@ -51,12 +60,15 @@ public class SoundBoard implements ClientModInitializer {
         Registry.register(Registry.SOUND_EVENT, SUI, SUI_EVENT);
         Registry.register(Registry.SOUND_EVENT, AMONG, AMONG_EVENT);
         Registry.register(Registry.SOUND_EVENT, WOW, WOW_EVENT);
+        Registry.register(Registry.SOUND_EVENT, SMG, SMG_EVENT);
         Registry.register(Registry.SOUND_EVENT, CUSTOM1, CUSTOM1_EVENT);
         Registry.register(Registry.SOUND_EVENT, CUSTOM2, CUSTOM2_EVENT);
         Registry.register(Registry.SOUND_EVENT, CUSTOM3, CUSTOM3_EVENT);
         Registry.register(Registry.SOUND_EVENT, CUSTOM4, CUSTOM4_EVENT);
         Registry.register(Registry.SOUND_EVENT, CUSTOM5, CUSTOM5_EVENT);
         Registry.register(Registry.SOUND_EVENT, CUSTOM6, CUSTOM6_EVENT);
+        Registry.register(Registry.SOUND_EVENT, CUSTOM7, CUSTOM7_EVENT);
+        Registry.register(Registry.SOUND_EVENT, CUSTOM8, CUSTOM8_EVENT);
         soundboard_key = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.soundboard.menu",
                 InputUtil.Type.KEYSYM,

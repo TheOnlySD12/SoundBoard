@@ -1,1 +1,1 @@
-GitHub doesnt allow empty folders
+GitHub doesn't allow empty folders, so I made this file; place your .ogg files in this folder

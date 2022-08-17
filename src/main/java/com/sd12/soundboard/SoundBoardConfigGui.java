@@ -39,6 +39,16 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 		compactButton.setToggle(SoundBoard.isCompact);
 		root.add(compactButton, 0, 3, 6, 1);
 
+		WToggleButton extendedButton = new WToggleButton(Text.literal("Extended Mode")) {
+			@Override
+			public void onToggle(boolean True) {
+				SoundBoard.isExtended = True;
+				LibGuiClient.saveConfig(LibGuiClient.config);
+			}
+		};
+		extendedButton.setToggle(SoundBoard.isExtended);
+		root.add(extendedButton, 0, 4, 6, 1);
+
 		WButton doneButton = new WButton(ScreenTexts.DONE);
 		doneButton.setOnClick(()->{
 			MinecraftClient.getInstance().setScreen(previous);

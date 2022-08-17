@@ -17,6 +17,12 @@
       "soundboard:wow"
     ]
   },
+  "smg": {
+    "subtitle": "subtitles.soundboard.smg",
+    "sounds": [
+      "soundboard:smg"
+    ]
+  },
   "custom1": {
     "subtitle": "subtitles.soundboard.custom1",
     "sounds": [
@@ -51,6 +57,18 @@
     "subtitle": "subtitles.soundboard.custom6",
     "sounds": [
       "soundboard:custom6"
+    ]
+  },
+  "custom7": {
+    "subtitle": "subtitles.soundboard.custom7",
+    "sounds": [
+      "soundboard:custom7"
+    ]
+  },
+  "custom8": {
+    "subtitle": "subtitles.soundboard.custom8",
+    "sounds": [
+      "soundboard:custom8"
     ]
   }
 }
