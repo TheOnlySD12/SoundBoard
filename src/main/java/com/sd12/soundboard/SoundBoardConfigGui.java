@@ -33,7 +33,7 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 			@Override
 			public void onToggle(boolean True) {
 				SoundBoard.isCompact = True;
-				LibGuiClient.saveConfig(LibGuiClient.config);
+
 			}
 		};
 		compactButton.setToggle(SoundBoard.isCompact);
@@ -43,7 +43,6 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 			@Override
 			public void onToggle(boolean True) {
 				SoundBoard.isExtended = True;
-				LibGuiClient.saveConfig(LibGuiClient.config);
 			}
 		};
 		extendedButton.setToggle(SoundBoard.isExtended);
