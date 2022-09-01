@@ -13,7 +13,6 @@ import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 
 public class SoundBoardConfigGui extends LightweightGuiDescription {
-
 	public SoundBoardConfigGui(Screen previous) {
 		WGridPanel root = new WGridPanel();
 		root.setInsets(Insets.ROOT_PANEL);
@@ -27,26 +26,28 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 			}
 		};
 		darkmodeButton.setToggle(LibGuiClient.config.darkMode);
-		root.add(darkmodeButton, 0, 2, 6, 1);
+		root.add(darkmodeButton, 0, 1, 6, 1);
 
-		WToggleButton compactButton = new WToggleButton(Text.literal("Compact Mode")) {
-			@Override
-			public void onToggle(boolean True) {
-				SoundBoard.isCompact = True;
-
+		WToggleButton compactButton = new WToggleButton(Text.literal("Compact Mode"));
+		WToggleButton extendedButton = new WToggleButton(Text.literal("Extended Mode"));
+		compactButton.setOnToggle(on -> {
+				SoundBoard.isCompact = on;
+				if (extendedButton.getToggle()) {
+					extendedButton.setToggle(!on);
+					SoundBoard.isExtended = !on;
+				}
+			});
+		extendedButton.setOnToggle(on -> {
+			SoundBoard.isExtended = on;
+			if (compactButton.getToggle()) {
+				compactButton.setToggle(!on);
+				SoundBoard.isCompact = !on;
 			}
-		};
+		});
 		compactButton.setToggle(SoundBoard.isCompact);
-		root.add(compactButton, 0, 3, 6, 1);
-
-		WToggleButton extendedButton = new WToggleButton(Text.literal("Extended Mode")) {
-			@Override
-			public void onToggle(boolean True) {
-				SoundBoard.isExtended = True;
-			}
-		};
 		extendedButton.setToggle(SoundBoard.isExtended);
-		root.add(extendedButton, 0, 4, 6, 1);
+		root.add(compactButton, 0, 2, 6, 1);
+		root.add(extendedButton, 0, 3, 6, 1);
 
 		WButton doneButton = new WButton(ScreenTexts.DONE);
 		doneButton.setOnClick(()->{
