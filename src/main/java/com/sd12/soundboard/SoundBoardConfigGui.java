@@ -32,17 +32,13 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 		WToggleButton extendedButton = new WToggleButton(Text.literal("Extended Mode"));
 		compactButton.setOnToggle(on -> {
 				SoundBoard.isCompact = on;
-				if (extendedButton.getToggle()) {
-					extendedButton.setToggle(!on);
-					SoundBoard.isExtended = !on;
-				}
+				extendedButton.setToggle(!on);
+				SoundBoard.isExtended = !on;
 			});
 		extendedButton.setOnToggle(on -> {
 			SoundBoard.isExtended = on;
-			if (compactButton.getToggle()) {
-				compactButton.setToggle(!on);
-				SoundBoard.isCompact = !on;
-			}
+			compactButton.setToggle(!on);
+			SoundBoard.isCompact = !on;
 		});
 		compactButton.setToggle(SoundBoard.isCompact);
 		extendedButton.setToggle(SoundBoard.isExtended);
@@ -50,9 +46,7 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 		root.add(extendedButton, 0, 3, 6, 1);
 
 		WButton doneButton = new WButton(ScreenTexts.DONE);
-		doneButton.setOnClick(()->{
-			MinecraftClient.getInstance().setScreen(previous);
-		});
+		doneButton.setOnClick(()-> MinecraftClient.getInstance().setScreen(previous));
 		root.add(doneButton, 0, 5, 3, 1);
 		
 		root.setBackgroundPainter(BackgroundPainter.VANILLA);
