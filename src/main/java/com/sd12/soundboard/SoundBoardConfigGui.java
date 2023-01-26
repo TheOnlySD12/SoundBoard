@@ -31,14 +31,22 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 		WToggleButton compactButton = new WToggleButton(Text.literal("Compact Mode"));
 		WToggleButton extendedButton = new WToggleButton(Text.literal("Extended Mode"));
 		compactButton.setOnToggle(on -> {
-				SoundBoard.isCompact = on;
-				extendedButton.setToggle(!on);
-				SoundBoard.isExtended = !on;
+			SoundBoard.isCompact = on;
+			SoundBoard.isExtended = !on;
+			extendedButton.setToggle(!on);
 			});
 		extendedButton.setOnToggle(on -> {
 			SoundBoard.isExtended = on;
-			compactButton.setToggle(!on);
 			SoundBoard.isCompact = !on;
+			compactButton.setToggle(!on);
+		});
+		compactButton.setOnToggle(off -> {
+			SoundBoard.isCompact = off;
+			compactButton.setToggle(off);
+		});
+		extendedButton.setOnToggle(off -> {
+			SoundBoard.isExtended = off;
+			extendedButton.setToggle(off);
 		});
 		compactButton.setToggle(SoundBoard.isCompact);
 		extendedButton.setToggle(SoundBoard.isExtended);
