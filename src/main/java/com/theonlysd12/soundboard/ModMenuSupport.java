@@ -1,4 +1,4 @@
-package com.sd12.soundboard;
+package com.theonlysd12.soundboard;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;

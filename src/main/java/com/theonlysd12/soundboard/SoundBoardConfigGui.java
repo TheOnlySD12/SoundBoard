@@ -1,4 +1,4 @@
-package com.sd12.soundboard;
+package com.theonlysd12.soundboard;
 
 import io.github.cottonmc.cotton.gui.client.BackgroundPainter;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
@@ -18,38 +18,39 @@ public class SoundBoardConfigGui extends LightweightGuiDescription {
 		root.setInsets(Insets.ROOT_PANEL);
 		setRootPanel(root);
 
-		WToggleButton darkmodeButton = new WToggleButton(Text.literal("Dark Mode")) {
-			@Override
-			public void onToggle(boolean on) {
-				LibGuiClient.config.darkMode = on;
-				LibGuiClient.saveConfig(LibGuiClient.config);
-			}
-		};
+		WToggleButton darkmodeButton = new WToggleButton(Text.literal("Dark Mode"));
+		darkmodeButton.setOnToggle(on -> {
+			LibGuiClient.config.darkMode = on;
+			LibGuiClient.saveConfig(LibGuiClient.config);
+		});
 		darkmodeButton.setToggle(LibGuiClient.config.darkMode);
 		root.add(darkmodeButton, 0, 1, 6, 1);
 
 		WToggleButton compactButton = new WToggleButton(Text.literal("Compact Mode"));
 		WToggleButton extendedButton = new WToggleButton(Text.literal("Extended Mode"));
+		compactButton.setToggle(SoundBoardConfig.currentMode == ConfigGuiModes.COMPACT);
+		extendedButton.setToggle(SoundBoardConfig.currentMode == ConfigGuiModes.EXTENDED);
 		compactButton.setOnToggle(on -> {
-			SoundBoard.isCompact = on;
-			SoundBoard.isExtended = !on;
-			extendedButton.setToggle(!on);
-			});
+			if (on) {
+				SoundBoardConfig.currentMode = ConfigGuiModes.COMPACT;
+				SoundBoardConfig.saveConfiguration();
+				extendedButton.setToggle(false);
+			} else if (!extendedButton.getToggle()) {
+				SoundBoardConfig.currentMode = ConfigGuiModes.NORMAL;
+				SoundBoardConfig.saveConfiguration();
+			}
+		});
+
 		extendedButton.setOnToggle(on -> {
-			SoundBoard.isExtended = on;
-			SoundBoard.isCompact = !on;
-			compactButton.setToggle(!on);
+			if (on) {
+				SoundBoardConfig.currentMode = ConfigGuiModes.EXTENDED;
+				SoundBoardConfig.saveConfiguration();
+				compactButton.setToggle(false);
+			} else if (!compactButton.getToggle()) {
+				SoundBoardConfig.currentMode = ConfigGuiModes.NORMAL;
+				SoundBoardConfig.saveConfiguration();
+			}
 		});
-		compactButton.setOnToggle(off -> {
-			SoundBoard.isCompact = off;
-			compactButton.setToggle(off);
-		});
-		extendedButton.setOnToggle(off -> {
-			SoundBoard.isExtended = off;
-			extendedButton.setToggle(off);
-		});
-		compactButton.setToggle(SoundBoard.isCompact);
-		extendedButton.setToggle(SoundBoard.isExtended);
 		root.add(compactButton, 0, 2, 6, 1);
 		root.add(extendedButton, 0, 3, 6, 1);
 

@@ -1,4 +1,4 @@
-package com.sd12.soundboard;
+package com.theonlysd12.soundboard;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -7,10 +7,12 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-import net.minecraft.registry.Registry;
 import org.lwjgl.glfw.GLFW;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SoundBoard implements ClientModInitializer {
     public static final Identifier SUI = new Identifier("soundboard:sui");
@@ -38,19 +40,19 @@ public class SoundBoard implements ClientModInitializer {
     public static final Identifier CUSTOM8 = new Identifier("soundboard:custom8");
     public static SoundEvent CUSTOM8_EVENT = SoundEvent.of(CUSTOM8);
     public static KeyBinding soundboard_key;
-    public static boolean isCompact;
-    public static boolean isExtended;
+    public static final Logger LOGGER = LoggerFactory.getLogger("soundboard");
 
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (soundboard_key.wasPressed()) {
                 assert client.player != null;
-                if (isCompact) {
-                    MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardCompactGui()));
-                } else  if (isExtended){
-                    MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardExtendedGui()));
-                } else {
-                    MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardGui()));
+                switch (SoundBoardConfig.currentMode) {
+                    case NORMAL ->
+                            MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardNormalGui()));
+                    case COMPACT ->
+                            MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardCompactGui()));
+                    case EXTENDED ->
+                            MinecraftClient.getInstance().setScreen(new SoundBoardScreen(new SoundBoardExtendedGui()));
                 }
             }
         });
@@ -58,6 +60,7 @@ public class SoundBoard implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        SoundBoardConfig.loadConfiguration();
         Registry.register(Registries.SOUND_EVENT, SUI, SUI_EVENT);
         Registry.register(Registries.SOUND_EVENT, AMONG, AMONG_EVENT);
         Registry.register(Registries.SOUND_EVENT, WOW, WOW_EVENT);

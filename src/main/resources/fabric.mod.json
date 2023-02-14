@@ -20,10 +20,10 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.sd12.soundboard.SoundBoard"
+      "com.theonlysd12.soundboard.SoundBoard"
     ],
     "modmenu": [
-      "com.sd12.soundboard.ModMenuSupport"
+      "com.theonlysd12.soundboard.ModMenuSupport"
     ]
   },
   "mixins": [

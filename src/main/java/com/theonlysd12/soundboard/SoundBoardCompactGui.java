@@ -1,4 +1,4 @@
-package com.sd12.soundboard;
+package com.theonlysd12.soundboard;
 
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.WButton;
@@ -19,17 +19,17 @@ public class SoundBoardCompactGui extends LightweightGuiDescription {
         WLabel label = new WLabel(Text.literal("Sound Board"));
         root.add(label, 0, 0, 2, 1);
 
-        WButton button = new WButton(Text.literal("SUIII Button"));
+        WButton button = new WButton(Text.translatable("button.soundboard.sui"));
         root.add(button, 0, 1, 5, 1);
         button.setOnClick(() -> MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance
                 .master(SoundBoard.SUI_EVENT, 1.0F, 1.0F)));
 
-        WButton button2 = new WButton(Text.literal("AMONGUS Button"));
+        WButton button2 = new WButton(Text.translatable("button.soundboard.among"));
         root.add(button2, 0, 2, 5, 1);
         button2.setOnClick(() -> MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance
                 .master(SoundBoard.AMONG_EVENT, 1.0F, 1.0F)));
 
-        WButton button3 = new WButton(Text.literal("WOW Button"));
+        WButton button3 = new WButton(Text.translatable("button.soundboard.wow"));
         root.add(button3, 0, 3, 5, 1);
         button3.setOnClick(() -> MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance
                 .master(SoundBoard.WOW_EVENT, 1.0F, 1.0F)));
