@@ -40,7 +40,7 @@ public class SoundBoard implements ClientModInitializer {
     public static final Identifier CUSTOM8 = new Identifier("soundboard:custom8");
     public static SoundEvent CUSTOM8_EVENT = SoundEvent.of(CUSTOM8);
     public static KeyBinding soundboard_key;
-    public static final Logger LOGGER = LoggerFactory.getLogger("soundboard");
+    public static final Logger LOGGER = LoggerFactory.getLogger("SoundBoard");
 
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
