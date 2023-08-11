@@ -3,7 +3,7 @@
   "id": "soundboard",
   "version": "${version}",
 
-  "name": "Sound Board",
+  "name": "SoundBoard",
   "description": "Adds a client-side Sound Board",
   "authors": [
     "TheOnlySD12"

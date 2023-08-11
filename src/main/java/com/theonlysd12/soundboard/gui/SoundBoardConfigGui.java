@@ -1,5 +1,7 @@
-package com.theonlysd12.soundboard;
+package com.theonlysd12.soundboard.gui;
 
+import com.theonlysd12.soundboard.ConfigGuiModes;
+import com.theonlysd12.soundboard.SoundBoardConfig;
 import io.github.cottonmc.cotton.gui.client.BackgroundPainter;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.impl.client.LibGuiClient;

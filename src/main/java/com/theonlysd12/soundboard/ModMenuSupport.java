@@ -2,6 +2,7 @@ package com.theonlysd12.soundboard;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
+import com.theonlysd12.soundboard.gui.SoundBoardConfigGui;
 import io.github.cottonmc.cotton.gui.client.CottonClientScreen;
 import net.minecraft.text.Text;
 

@@ -31,12 +31,15 @@ public class SoundBoardConfig {
 
     public static void loadConfiguration() {
         try {
-            byte[] jsonData = Files.readAllBytes(configFile.toPath());
-            Wrapper wrapper = gson.fromJson(new String(jsonData), Wrapper.class);
-            SoundBoardConfig.currentMode = wrapper.currentMode;
-            SoundBoard.LOGGER.info("Loaded configuration file for SoundBoard: currentMode = " + SoundBoardConfig.currentMode);
+            if (configFile.exists()) {
+                byte[] jsonData = Files.readAllBytes(configFile.toPath());
+                Wrapper wrapper = gson.fromJson(new String(jsonData), Wrapper.class);
+                SoundBoardConfig.currentMode = wrapper.currentMode;
+            } else {
+                SoundBoardConfig.currentMode = ConfigGuiModes.NORMAL;
+                saveConfiguration();
+            }
         } catch (IOException e) {
-            SoundBoard.LOGGER.warn("Couldn't load configuration file for SoundBoard; ignore if this is the first run");
             e.printStackTrace();
         }
     }

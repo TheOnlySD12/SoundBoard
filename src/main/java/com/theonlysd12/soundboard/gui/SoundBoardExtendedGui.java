@@ -1,5 +1,6 @@
-package com.theonlysd12.soundboard;
+package com.theonlysd12.soundboard.gui;
 
+import com.theonlysd12.soundboard.SoundBoard;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.WButton;
 import io.github.cottonmc.cotton.gui.widget.WGridPanel;
