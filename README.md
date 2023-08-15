@@ -1,33 +1,69 @@
+[<img alt="github-singular" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/github-singular_vector.svg">](https://github.com/TheOnlySD12) <img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
+
 # SoundBoard
-![client](https://img.shields.io/badge/environment-client-1976d2?style=flat-square)
-![Mod loader: Fabric](https://img.shields.io/badge/modloader-Fabric-1976d2?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFHGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTEyLTE2VDE2OjU0OjE3LTA4OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNy0yOFQyMToxNzo0OC0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOS0wNy0yOFQyMToxNzo0OC0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowZWRiMWMyYy1mZjhjLWU0NDEtOTMxZi00OTVkNGYxNGM3NjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MGVkYjFjMmMtZmY4Yy1lNDQxLTkzMWYtNDk1ZDRmMTRjNzYwIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MGVkYjFjMmMtZmY4Yy1lNDQxLTkzMWYtNDk1ZDRmMTRjNzYwIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowZWRiMWMyYy1mZjhjLWU0NDEtOTMxZi00OTVkNGYxNGM3NjAiIHN0RXZ0OndoZW49IjIwMTgtMTItMTZUMTY6NTQ6MTctMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4/HiGMAAAAtUlEQVRYw+XXrQqAMBQF4D2P2eBL+QIG8RnEJFaNBjEum+0+zMQLtwwv+wV3ZzhhMDgfJ0wUSinxZUQWgKos1JP/AbD4OneIDyQPwCFniA+EJ4CaXm4TxAXCC0BNHgLhAdAnx9hC8PwGSRtAFVMQjF7cNTWED8B1cgwW20yfJgAvrssAsZ1cB3g/xckAxr6FmCDU5N6f488BrpCQ4rQBJkiMYh4ACmLzwOQF0CExinkCsvw7vgGikl+OotaKRwAAAABJRU5ErkJggg==)
 
-A Fabric mod that adds a client-side Sound Board
-## Use
-Press "O" in-game to open the GUI
+**SoundBoard** is a must-have mod for Minecraft players using [Fabric](https://fabricmc.net). It introduces an ingenious *client-side* sound board that not only enhances your own auditory experience but also transforms multiplayer interactions. When combined with the server-side version, **SoundBoard** enables you to share your favorite sounds with other players, fostering a vibrant community atmosphere that adds a whole new dimension to your gameplay. Elevate your Minecraft experience to new heights by immersing yourself in the world of customizable sounds and collaborative audio exploration.
 
-You can change this in Keyboard Settings
+## Features
 
-To enable Dark, Compact or Extended Mode install [ModMenu](https://modrinth.com/mod/modmenu) and go to SoundBoard Config
+- Immerse yourself in either the *Light* or *Dark* themes that cater to your style.
+- Customize your gameplay with *Normal*, *Compact*, and *Extended* modes to suit your preferences.
+- Express yourself by adding your own personalized sounds to the sound board, transforming your Minecraft world into a symphony of creativity.
+- And that's not all – discover even more exciting features as you explore the mod!
+
+## Getting Started
+
+Embark on your sound adventure with **SoundBoard** by downloading and installing the version tailored for your Minecraft setup. Find your groove and redefine how you interact with the game. This table that can help you choose the correct versions:
+
+| Minecraft | Client | Server |
+| -- | -- | -- |
+| 1.20.1 | 3.0.0 | 1.0 |
+| 1.19.4 | 2.5.0 | Not Supported *yet*|
+
+
+## Configuration
+
+Once you've successfully installed **SoundBoard** into your Minecraft environment, fine-tune your experience using the user-friendly [ModMenu](https://modrinth.com/mod/modmenu) interface. Accessible through the *Mods* button on the main menu screen, you can effortlessly modify themes and modes to your liking by pressing on the mod's icon.
+
 ## Custom Sounds
-### Info
-To add custom sounds you must use a resource pack
 
-Template Resource Pack : [GitHub Link](https://github.com/TheOnlySD12/SoundBoardResourcePack)
+To add custom sounds you must use a resource pack and if you want other to hear your sounds they must also have that resource pack. I have created a [template](https://github.com/TheOnlySD12/SoundBoardResourcePack) that can be used to easily add sounds.
+
 ### Guide
+
 1. Download the template resource pack and unzip it
-2. Download a .mp3 file
-3. Convert your .mp3 to .ogg
-    - [Online Converter](https://convertio.co/mp3-ogg/)
-4. Rename it custom1.ogg
-    - To add more just rename them custom2.ogg, custom3.ogg etc.
-    - Six sounds is the limit (8 in Extended Mode)
-5. Put it in the folder assets\soundboard\sounds
-### Optional
+2. Download a `.mp3` file with your desired sound
+3. Convert your `.mp3` to `.ogg`
+   - [Online Converter](https://convertio.co/mp3-ogg/)
+4. Rename it `custom1.ogg`
+   - To add more sounds just rename them `custom2.ogg`, `custom3.ogg` etc.
+   - Six sounds is the limit (8 in *Extended* Mode)
+5. Put the sound in `assets\soundboard\sounds`
+6. Zip the resource pack and put it in the `resources` folder of you Minecraft installation
+
+> Note: Make sure that you didn't zip the folder of the resource pack. The path to the `pack.mcmeta` file should look like this: `ResourcepackName.zip\pack.mcmeta`
+
 #### Subtitles
-1. Open assets\soundboard\lang\en_us.json
+
+To add subtitles you can do this:
+
+1. Open `assets\soundboard\lang\en_us.json`
 2. Add subtitles or change button names
+
 #### More Sounds
-1. You can also modify the sounds that come with the mod
-2. Just follow the guide for adding sounds but instead of naming the files custom1.ogg, ...
-3. Name them among.ogg, smg.ogg, sui.ogg, wow.gg
+
+To add a few more custom sounds you can change the default ones. Simply follow the guide for adding sounds but instead of naming the files `custom1.ogg`, `custom2.ogg` etc. Name them `among.ogg`, `smg.ogg`, `sui.ogg` and  `wow.ogg`.
+
+## Support
+
+For any inquiries or concerns related to the **SoundBoard** client-mod, navigate to our dedicated [issue tracker](https://github.com/TheOnlySD12/SoundBoard/issues). If you encounter issues with the server-side mod, you're encouraged to utilize our [server-side issue tracker](https://github.com/TheOnlySD12/SoundBoard-Server-Fabric/issues).
+
+## Credits
+
+**SoundBoard** was developed by [TheOnlySD12](https://github.com/TheOnlySD12) and is licensed under the **MIT License**. Special thanks to the following people for their contributions to the project:
+
+- Me (Code Review)
+- Myself (Ideas)
+- I (Testing)
+
+I hope you enjoy using **SoundBoard**! Please don't hesitate to use *the issue tracker* if you have any feedback or suggestions.

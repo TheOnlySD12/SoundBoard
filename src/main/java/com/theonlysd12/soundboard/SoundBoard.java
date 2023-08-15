@@ -6,9 +6,13 @@ import com.theonlysd12.soundboard.gui.SoundBoardNormalGui;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
@@ -44,6 +48,7 @@ public class SoundBoard implements ClientModInitializer {
     public static SoundEvent CUSTOM8_EVENT = SoundEvent.of(CUSTOM8);
     public static KeyBinding soundboard_key;
     public static final Logger LOGGER = LoggerFactory.getLogger("SoundBoard");
+    public static final Identifier SOUNDBOARD_ID = new Identifier("soundboard", "soundboard");
 
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -59,6 +64,14 @@ public class SoundBoard implements ClientModInitializer {
                 }
             }
         });
+    }
+
+    public static void playSound(SoundEvent soundEvent) {
+        MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance
+                .master(soundEvent, 1.0F, 1.0F));
+        PacketByteBuf buf = PacketByteBufs.create();
+        buf.writeIdentifier(soundEvent.getId());
+        ClientPlayNetworking.send(SOUNDBOARD_ID, buf);
     }
 
     @Override
