@@ -15,10 +15,11 @@
 
 Embark on your sound adventure with **SoundBoard** by downloading and installing the version tailored for your Minecraft setup. Find your groove and redefine how you interact with the game. This table that can help you choose the correct versions:
 
-| Minecraft | Client | Server |
-| -- | -- | -- |
-| 1.20.1 | 3.0.0 | 1.0 |
-| 1.19.4 | 2.5.0 | Not Supported *yet*|
+| Minecraft | Client     | Server-Mod    | Server-Plugin |
+|-----------|------------|---------------|---------------|
+| 1.20.2    | 3.0-1.20.2 | 1.0           | 1.0           |
+| 1.20.1    | 3.0.0      | 1.0           | 1.0           |
+| 1.19.4    | 2.5.0      | Not Supported | Not Supported |
 
 
 ## Configuration
