@@ -1,26 +1,26 @@
 {
-  "sui": {
-    "subtitle": "subtitles.soundboard.sui",
+  "sound1": {
+    "subtitle": "subtitles.soundboard.sound1",
     "sounds": [
-      "soundboard:sui"
+      "soundboard:sound1"
     ]
   },
-  "among": {
-    "subtitle": "subtitles.soundboard.among",
+  "sound2": {
+    "subtitle": "subtitles.soundboard.sound2",
     "sounds": [
-      "soundboard:among"
+      "soundboard:sound2"
     ]
   },
-  "wow": {
-    "subtitle": "subtitles.soundboard.wow",
+  "sound3": {
+    "subtitle": "subtitles.soundboard.sound3",
     "sounds": [
-      "soundboard:wow"
+      "soundboard:sound3"
     ]
   },
-  "smg": {
-    "subtitle": "subtitles.soundboard.smg",
+  "sound4": {
+    "subtitle": "subtitles.soundboard.sound4",
     "sounds": [
-      "soundboard:smg"
+      "soundboard:sound4"
     ]
   },
   "custom1": {

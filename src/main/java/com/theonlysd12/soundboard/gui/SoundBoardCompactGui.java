@@ -18,17 +18,17 @@ public class SoundBoardCompactGui extends LightweightGuiDescription {
         WLabel label = new WLabel(Text.literal("Sound Board"));
         root.add(label, 0, 0, 2, 1);
 
-        WButton button = new WButton(Text.translatable("button.soundboard.sui"));
+        WButton button = new WButton(Text.translatable("button.soundboard.sound1"));
         root.add(button, 0, 1, 5, 1);
-        button.setOnClick(() -> SoundBoard.playSound(SoundBoard.SUI_EVENT));
+        button.setOnClick(() -> SoundBoard.playSound(SoundBoard.SOUND1_EVENT));
 
-        WButton button2 = new WButton(Text.translatable("button.soundboard.among"));
+        WButton button2 = new WButton(Text.translatable("button.soundboard.sound2"));
         root.add(button2, 0, 2, 5, 1);
-        button2.setOnClick(() -> SoundBoard.playSound(SoundBoard.AMONG_EVENT));
+        button2.setOnClick(() -> SoundBoard.playSound(SoundBoard.SOUND2_EVENT));
 
-        WButton button3 = new WButton(Text.translatable("button.soundboard.wow"));
+        WButton button3 = new WButton(Text.translatable("button.soundboard.sound3"));
         root.add(button3, 0, 3, 5, 1);
-        button3.setOnClick(() -> SoundBoard.playSound(SoundBoard.WOW_EVENT));
+        button3.setOnClick(() -> SoundBoard.playSound(SoundBoard.SOUND3_EVENT));
 
         WButton button4 = new WButton(Text.translatable("button.soundboard.custom1"));
         root.add(button4, 5, 1, 5, 1);
